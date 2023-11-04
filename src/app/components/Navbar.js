@@ -10,18 +10,21 @@ class Header extends React.Component {
     render() {
         <navbar>
             <div>
-                <link to="/Home/Home">
-                <p>Home</p>
-                </link>
-                <link to="/Home/Home">
+            <link to="/Home">
+            <p>Home</p>
+            </link>
+            </div>
+                <div>
+                <link to="/About">
                 <p>About</p>
                 </link>
-                <link to="/Notes/Notes">
+                </div>
+                <div>
+                <link to="/Notes">
                 <p>Notes</p>
                 </link>
+                </div>
 
-
-            </div>
         </navbar>
     }
 }

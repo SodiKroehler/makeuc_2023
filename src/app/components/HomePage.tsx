@@ -1,10 +1,11 @@
+"use client"
 import styles from './page.module.css'
-import SearchBar from './Home/home'
+import Searchbar from './Home/Searchbar'
 
 export default async function Home() {
   return (
     <main>
-      <Home />
+      <Searchbar />
     </main>
   )
 } 

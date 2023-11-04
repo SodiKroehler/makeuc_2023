@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Home = () => {
+const Searchbar = () => {
   // State to store the input value
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -40,4 +40,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Searchbar;

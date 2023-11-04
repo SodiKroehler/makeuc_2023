@@ -1,30 +1,41 @@
+'use client'
+
 import React from 'react';
 import { Component } from 'react';
 import ReactDOM from 'react-dom';
-import styles from './YourComponent.module.css';
-import { Navbar, Nav, NavItem, NavDropdown } from 'react-bootstrap';
+import { useRouter } from 'next/navigation';
+import './Buttons.css';
 
-class Header extends React.Component {
+
+
+const Navbar = () => {
 
     
-    render() {
-        <navbar>
-            <div>
-            <link to="/Home">
-            <p>Home</p>
-            </link>
-            </div>
-                <div>
-                <link to="/About">
-                <p>About</p>
-                </link>
-                </div>
-                <div>
-                <link to="/Notes">
-                <p>Notes</p>
-                </link>
-                </div>
+    return (
+        <div className='Navbar'> 
 
-        </navbar>
-    }
-}
+            <button className="LeftButtons" type="button" onClick={() => router.push('/Account')}>
+                Account
+            </button>
+
+            <button className="LeftButtons" type="button" onClick={() => router.push('/Home')}>
+                Home
+            </button>
+
+            <button className="LeftButtons" type="button" onClick={() => router.push('/About')}>
+                About
+            </button>
+
+            <button className="LeftButtons" type="button" onClick={() => router.push('/Notes')}>
+                Notes
+            </button>
+            <button className="RightButtons" type="button" onClick={() => router.push('/NewNote')}>
+                    New Note +
+                </button>
+        </div>
+            
+               
+    )
+};
+
+export default Navbar;

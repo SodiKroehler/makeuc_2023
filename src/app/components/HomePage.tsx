@@ -4,7 +4,7 @@ import SearchBar from './Home/home'
 export default async function Home() {
   return (
     <main>
-      <Home />
+      <Query />
     </main>
   )
 } 

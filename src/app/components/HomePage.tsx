@@ -1,5 +1,5 @@
 import styles from './page.module.css'
-import Home from './components/home.js'
+import SearchBar from './Home/home'
 
 export default async function Home() {
   return (

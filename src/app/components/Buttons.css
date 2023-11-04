@@ -1,0 +1,35 @@
+
+
+.RightButtons {
+ padding: 100px;
+ display: block;
+ width: 60px;
+ flex-grow: 1;
+};
+
+.LeftButtons {
+padding: 200px;
+display: block;
+width: 60px;
+flex-grow: 1;
+background-color: #ffffff;
+};
+
+.LeftButtons:hover {
+background-color: #ffffff;
+color: rgb(70, 138, 190);
+};
+
+.RightButtons:hover {
+    background-color: #ffffff;
+    color: rgb(70, 138, 190);
+};
+
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    background-color: #333;
+    justify-content: flex-start;
+};
+
+

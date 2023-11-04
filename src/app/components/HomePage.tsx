@@ -10,7 +10,7 @@ export default async function Home() {
     <main>
       <Navbar />
       <Searchbar />
-      <NewNote />
+      {/* <NewNote /> */}
     </main>
   )
 } 

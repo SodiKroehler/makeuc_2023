@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import HomePage from './../components/HomePage'
+import HomePage from './components/HomePage'
 
-export default function Home() {
+
+export default async function Home() {
   return (
     <main>
-      <HomePage></HomePage>
+      <HomePage  />
     </main>
   )
 }

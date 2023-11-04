@@ -1,3 +1,5 @@
-export default HomePage () => {
-    <div>Hello World</div>
+export default HomePage =() => {
+    return (
+    <div>Hello World</div> 
+    )
 }

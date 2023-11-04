@@ -6,17 +6,60 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
-
 model User {
-  id                String  @unique @id @default(cuid())
-  name              String
-  isNice            String
-  theme             String
-  email             String
-  profilePic        String?
+  id         String  @id @default(cuid())
+  name       String
+  isNice     String?
+  theme      String?
+  email      String
+  profilePic String?
+  schoolID   String
+  school     School  @relation(fields: [schoolID], references: [id])
+  Note       Note[]
+}
+
+model Note {
+  id          String   @id @default(cuid())
+  body        String
+  classID     String
+  class       Class    @relation(fields: [classID], references: [id])
+  keywords    String[]
+  description String
+  title       String
+  public      Boolean
+  date        String
+  ownerID     String
+  owner       User     @relation(fields: [ownerID], references: [id])
+  topic       Topic[]
+}
+
+model Class {
+  id       String @id @default(cuid())
+  name     String
+  number   String
+  teacher  String
+  semester String
+  time     String
+  days     String
+  schoolID String
+  School   School @relation(fields: [schoolID], references: [id])
+  notes    Note[]
+}
+
+model Topic {
+  id    String @id @default(cuid())
+  name  String
+  notes Note[]
+}
+
+model School {
+  id    String  @id @default(cuid())
+  name  String
+  User  User[]
+  Class Class[]
 }

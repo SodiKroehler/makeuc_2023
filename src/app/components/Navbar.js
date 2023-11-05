@@ -1,8 +1,7 @@
 
-// import React from 'react';
 import './Navbar.css'; // Make sure to create a Navbar.css file for your styles
 import Image from 'next/image'
-import Link from 'next/Link'
+import Link from 'next/link'
 
 const Navbar = () => {
   // Define a function to handle button clicks if needed
@@ -24,7 +23,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-</div>
+      </div>
       
   );
 };

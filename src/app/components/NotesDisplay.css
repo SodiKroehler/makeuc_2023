@@ -1,0 +1,11 @@
+#notesBox {
+    width: 80%;
+    height: 400px;
+    margin: 20px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  

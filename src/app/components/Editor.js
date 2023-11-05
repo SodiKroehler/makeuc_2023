@@ -1,4 +1,5 @@
 "use client"
+import React, { useState, useEffect } from 'react';
 import ExampleTheme from "./ExampleTheme";
 import { LexicalComposer } from "@lexical/react/LexicalComposer";
 import { RichTextPlugin } from "@lexical/react/LexicalRichTextPlugin";
@@ -16,6 +17,7 @@ import { LinkPlugin } from "@lexical/react/LexicalLinkPlugin";
 import { ListPlugin } from "@lexical/react/LexicalListPlugin";
 import { MarkdownShortcutPlugin } from "@lexical/react/LexicalMarkdownShortcutPlugin";
 import { TRANSFORMERS } from "@lexical/markdown";
+import {useLexicalComposerContext} from '@lexical/react/LexicalComposerContext';
 
 import ListMaxIndentLevelPlugin from "./plugins/ListMaxIndentLevelPlugin";
 import CodeHighlightPlugin from "./plugins/CodeHighlightPlugin";
@@ -25,6 +27,7 @@ import './Editor.css';
 function Placeholder() {
   return <div className="editor-placeholder">Enter some rich text...</div>;
 }
+
 
 const editorConfig = {
   // The editor theme
@@ -49,7 +52,29 @@ const editorConfig = {
   ]
 };
 
+// Define the OnChangePlugin
+function OnChangePlugin({ onChange }) {
+  const [editor] = useLexicalComposerContext();
+  useEffect(() => {
+    return editor.registerUpdateListener(({ editorState }) => {
+      onChange(editorState);
+    });
+  }, [editor, onChange]);
+}
+
 export default function Editor() {
+  // Initialize state to hold the serialized editor state
+  const [editorStateJSON, setEditorStateJSON] = useState("");
+
+  // Define the onChange handler
+  const handleEditorStateChange = (editorState) => {
+    // Serialize the editorState to JSON
+    const serializedState = JSON.stringify(editorState.toJSON());
+    setEditorStateJSON(serializedState);
+    // Here you can also call a function to send the serializedState to the database
+    // sendToDatabase(serializedState);
+  };
+
   return (
     <LexicalComposer initialConfig={editorConfig}>
       <div className="editor-container">
@@ -61,16 +86,11 @@ export default function Editor() {
             ErrorBoundary={LexicalErrorBoundary}
           />
           <HistoryPlugin />
-          {/* <TreeViewPlugin /> */}
-          <AutoFocusPlugin />
-          <CodeHighlightPlugin />
-          <ListPlugin />
-          <LinkPlugin />
-          <AutoLinkPlugin />
-          <ListMaxIndentLevelPlugin maxDepth={7} />
-          <MarkdownShortcutPlugin transformers={TRANSFORMERS} />
+          {/* ... all your other plugins */}
+          <OnChangePlugin onChange={handleEditorStateChange} />
         </div>
       </div>
     </LexicalComposer>
   );
 }
+

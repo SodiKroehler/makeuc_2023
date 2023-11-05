@@ -4,16 +4,17 @@ import './NewNote.css'; // make sure to create a corresponding CSS file
 
 const NewNote = () => {
   const [schoolName, setSchool] = useState('');
-  const [school, setSchoolList] = useState([]);
+  const [schools, setSchoolList] = useState([]);
   const [topic, setTopic] = useState('');
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const topics = [];
+  const school = "";
 
   const handleSubmit = (event) => {
     event.preventDefault();
     // Handle the form submission logic here
-    console.log({ school, topic, title, description });
+    console.log({ schools, topic, title, description });
   };
 
   useEffect(() => {

@@ -1,18 +1,30 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './NewNote.css'; // make sure to create a corresponding CSS file
 
 const NewNote = () => {
-  const [school, setSchool] = useState('');
+  const [schoolName, setSchool] = useState('');
+  const [schools, setSchoolList] = useState([]);
   const [topic, setTopic] = useState('');
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  const topics = [];
 
   const handleSubmit = (event) => {
     event.preventDefault();
     // Handle the form submission logic here
     console.log({ school, topic, title, description });
   };
+
+  useEffect(() => {
+    const callAPI = async () => {
+        const query = await fetch('api/school?userID=clokp4tzg0004soz46ntd21uy')
+        const repo = await query.json();
+        setSchoolList(repo.schools)
+    }
+    callAPI();
+  }, []);
+
 
   return (
     <div className="new-note-container">
@@ -21,7 +33,7 @@ const NewNote = () => {
         <select value={school} onChange={(e) => setSchool(e.target.value)}>
           {/* Populate these options with your actual data */}
            {schools.map((school) => (
-            <option key={school.name} value={school.name}>
+            <option key={school.id} value={school.name}>
               {school.name}
             </option>
           ))}

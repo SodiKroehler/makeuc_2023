@@ -18,7 +18,7 @@ const Navbar = () => {
       <Link className="notes-button" href='/Notes'>Notes</Link>
       <div className="navbar-right">
         <Link className="nav-item new-note" href='/NewNote'>New Note +</Link>
-        <Link className="profile-pic" href='/home'>
+        <Link className="profile-pic" href='/ChooseLoginOrSignUp'>
           <Image src="/profile.png" alt="Notes Anywhere" width={50} height={50} />
         </Link>
       </div>

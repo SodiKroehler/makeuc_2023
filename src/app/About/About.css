@@ -1,4 +1,24 @@
 .BodyParagraph {
+    display: flex;           /* This turns the container into a flex container */
+    flex-direction: column;  /* Aligns children (the paragraphs) vertically */
+    justify-content: center; /* Centers children horizontally in the container */
+    align-items: center;     /* Centers children vertically in the container */
+    max-width: 450px;        /* Maximum width of the container */
+    margin: auto;
+    text-align: center;
+    
+}
+
+.PageHeading {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    color: aliceblue;
+    margin-bottom: 45px;
+    margin-top: 45px; /* Set an appropriate maximum height */
+    overflow-y: scroll;
+    text-align: center;
+}
+
+.paragraphs {
+    margin-bottom: 20px;
 }

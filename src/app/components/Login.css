@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .login-container {
+    background-color: #333;
+    padding: 2rem;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .user-icon {
+    background-image: url('path_to_your_user_icon.png'); /* Replace with your user icon image path */
+    background-size: cover;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem;
+  }
+  
+  .input-field {
+    margin-bottom: 1rem;
+    background: #555;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem;
+    width: 100%;
+    color: white;
+  }
+  
+  .login-button {
+    background-color: #222;
+    color: rgb(70, 138, 190);
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem;
+    width: 100%;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  
+  .login-button:hover {
+    background-color: white;
+  }
+  
+  .checkbox,
+  .forgot-password {
+    color: #bbb;
+    font-size: 0.8rem;
+  }
+  
+  .checkbox label,
+  .forgot-password a {
+    color: #bbb;
+    text-decoration: none;
+  }
+  
+  .login-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }

@@ -1,0 +1,80 @@
+.account-creation-form {
+    width: 300px; /* Adjust width as needed */
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* A subtle shadow */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center;
+  }
+  
+  .account-creation-form h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .account-creation-form p {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="email"],
+  .form-group input[type="text"],
+  .form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .checkbox-group {
+    margin: 20px 0;
+    text-align: left;
+  }
+  
+  .checkbox-group label {
+    display: inline-block;
+    margin-left: 5px;
+  }
+  
+  .checkbox-group input[type="checkbox"] {
+    margin: 0;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(70, 138, 190); /* Example button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: white; /* Darken the button slightly on hover */
+  }
+  
+  .terms {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+  
+  .terms a {
+    color: rgb(70, 138, 190); /* Links color */
+    text-decoration: none;
+  }
+  
+  .terms a:hover {
+    text-decoration: underline;
+  }

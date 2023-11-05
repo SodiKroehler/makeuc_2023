@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react';
 import './NewNote.css'; // make sure to create a corresponding CSS file
 

@@ -1,8 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-const { Cheetah } = require("@picovoice/cheetah-node")
-const { PvRecorder } = require("@picovoice/pvrecorder-node")
-const readline = require("readline")
+
 
 export default function scren() {
     const [recording, setRecording] = useState("");

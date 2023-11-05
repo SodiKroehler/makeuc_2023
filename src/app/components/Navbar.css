@@ -9,14 +9,10 @@
 
 .nav-item {
   color: white; /* Assuming you want white text */
-  padding: 5px 15px; /* Adjust padding to manage the size of the buttons */
+  padding: 5px 15px;
   margin-right: 2.0rem; /* Reduce the right margin to bring items closer */
   font-size: 1.2rem;
-  background: none;
-  border: none;
   cursor: pointer;
-  text-decoration: none; /* In case these are anchor tags */
-  /* Rest of your styles */
 }
   
   .nav-item:last-child {

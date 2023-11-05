@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@lexical/react": "^0.12.2",
+    "@google-cloud/speech": "^6.0.2",
+    "@picovoice/cheetah-node": "^1.1.1",
+    "@picovoice/pvrecorder-node": "^1.2.1",
     "@prisma/client": "^5.5.2",
     "lexical": "^0.12.2",
     "next": "14.0.1",

@@ -5,6 +5,7 @@ import { useAppDispatch, useAppSelector } from "../lib/redux/hooks";
 import {setQuery} from '../lib/redux/gameSlice'
 
 import './Notes.css'
+import Navbar from './Navbar';
 
 class Notes extends Component {
   constructor(props) {
@@ -121,7 +122,7 @@ callAPITitles();
 
         <div className='PageHeading'> <h1>ALL NOTES</h1></div>
 
-        <div >
+        <div className='group-group'>
         <select className='form-group' value={this.state.selectedSchool} onChange={this.handleSchoolChange}>
           <option value="">Select School</option>
           {this.state.schools.map((school) => (
@@ -130,8 +131,7 @@ callAPITitles();
             </option>
           ))}
         </select>
-        </div>
-        <div>
+        
         <select className='form-group' disabled={!this.state.selectedSchool} value={this.state.selectedTopic} onChange={this.handleTopicChange}>
           <option value="">Select Topic</option>
           {this.state.filteredTopics.map((topic) => (
@@ -140,9 +140,7 @@ callAPITitles();
             </option>
           ))}
         </select>
-        </div>
-
-        <div>
+        
         <select className='form-group' disabled={!this.state.selectedTopic} value={this.state.selectedClass} onChange={this.handleClassChange}>
           <option value="">Select Class</option>
           {this.state.filteredClasses.map((clazz) => (
@@ -154,21 +152,14 @@ callAPITitles();
         </div>
 
         <div className='TopicStyles'>
-        <select size={5} value={this.state.selectedTitle} disabled={!this.state.selectedClass} onChange={this.handleRedirect}>
-          <option value="">Select Title</option>
+        <select className='TopicStyles' size={5} value={this.state.selectedTitle} disabled={!this.state.selectedClass} onChange={this.handleRedirect}>
+          <option value="">Select Title | Description</option>
           {this.state.filteredTitles.map((title, index) => (
-            <option key={index} value={title}>
-              {title}
+            <option className='bodyText' key={index} value={title}>
+              {title} | {title.disc}
             </option>
           ))}
         </select>
-        </div>
-
-        <div className='DescriptionStyles'>
-          <title>Description</title>
-          <p>
-          {this.state.title ? this.state.title.disc : 'Description not available'}
-          </p>
         </div>
       </body>
     );

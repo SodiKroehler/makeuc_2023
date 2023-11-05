@@ -48,5 +48,26 @@
     background-color: #444;
   }
 
+  .create {
+    padding: 10px;
+    background-color: rgb(70, 138, 190);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block; /* Make the element a block-level element */
+    text-align: center; /* Center the text horizontally */
+    width: 100%; /* Optional: if you want the button to fill its container */
+  }
+  
+
+  .nav-item {
+    color: white; /* Assuming you want white text */
+    padding: 5px 15px;
+    margin-right: 2.0rem; /* Reduce the right margin to bring items closer */
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
   
   

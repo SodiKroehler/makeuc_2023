@@ -16,7 +16,7 @@ const GetUserDetails = () => {
         callAPI();
     }, [trigger]);
 
-    <button onClick= (() => setTrigger(!mytrigger))>
+    // <button onClick= (() => setTrigger(!mytrigger))>
 
         return (
             <div> 

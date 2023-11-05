@@ -1,0 +1,53 @@
+.navbar {
+  display: flex;
+  justify-content: start; /* Align items to the start of the navbar */
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #000; /* Assuming a black navbar */
+  /* Rest of your styles */
+}
+
+.nav-item {
+  color: white; /* Assuming you want white text */
+  padding: 5px 15px; /* Adjust padding to manage the size of the buttons */
+  margin-right: 2.0rem; /* Reduce the right margin to bring items closer */
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none; /* In case these are anchor tags */
+  /* Rest of your styles */
+}
+  
+  .nav-item:last-child {
+    margin-right: 0; /* Removes margin from the last item */
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-pic {
+    border-radius: 50%;
+    width: 40px; /* Adjust size as needed */
+    margin-right: 1.5rem; /* You can adjust this as needed */
+  }
+  
+  .new-note {
+    font-weight: bold;
+    margin-left: 1rem; /* Adds some space between the profile pic and the new note button */
+    font-size: 1.2rem;
+  }
+
+  .notes-button {
+    margin-right: 70.0rem; /* specific spacing for notes button */
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  /* Add additional styling as needed for spacing, hovering, etc. */
+  

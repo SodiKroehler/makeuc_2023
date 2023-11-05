@@ -3,6 +3,7 @@ import './About.css';
 
 
 const About = () => {
+    <body>
     <div className='BodyParagraph'>
         <h1>Who We Are</h1>
         <p>Meet the trio behind NotesAnywhere: Kevin Pak, Sodi Kroehler, and Isaiah LaDuke. We're on a mission to revolutionize the way you create and manage your notes.
@@ -12,6 +13,7 @@ const About = () => {
             With NotesAnywhere, we're here to rescue you from these dilemmas. Our platform offers a user-friendly solution to help you effortlessly organize, access, and collaborate on your notes. Say goodbye to the chaos of traditional note-taking and embrace a seamless and efficient way to capture and retrieve essential information.
         </p>
     </div>
+    </body>
 };
 
 export default About;

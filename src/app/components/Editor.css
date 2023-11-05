@@ -6,6 +6,7 @@ body {
     font-weight: 500;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    
   }
   
   .other h2 {
@@ -47,7 +48,8 @@ body {
   .editor-container {
     margin: 20px auto 20px auto;
     border-radius: 2px;
-    max-width: 600px;
+    max-width: 1000px;
+ 
     color: #000;
     position: relative;
     line-height: 20px;

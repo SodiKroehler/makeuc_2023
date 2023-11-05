@@ -1,6 +1,9 @@
 'use client'
 import React, { Component, useEffect } from 'react';
 import {redirect} from 'next/navigation';
+import { useAppDispatch, useAppSelector } from "../lib/redux/hooks";
+import {setQuery} from '../lib/redux/gameSlice'
+
 import './Notes.css'
 
 class Notes extends Component {

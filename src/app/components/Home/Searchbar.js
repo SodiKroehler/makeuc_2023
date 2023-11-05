@@ -2,10 +2,16 @@
 import React, { useState } from 'react';
 import logo from '/public/logo.jpg';
 import Image from 'next/image'
+import {redirect} from 'next/navigation';
+import { useAppDispatch, useAppSelector } from "./../../lib/redux/hooks";
+import {searchSlice} from './../../lib/redux/searchSlice'
 
 const Searchbar = () => {
   // State to store the input value
   const [searchQuery, setSearchQuery] = useState('');
+  // let gameState = useAppSelector((state) => state.gameReducer.gameState);
+  const dispatch = useAppDispatch();
+
 
   // Function to handle the input change
   const handleInputChange = (event) => {
@@ -16,7 +22,8 @@ const Searchbar = () => {
   const handleSearchSubmit = (event) => {
     event.preventDefault();
     // Implement your search logic here or redirect to a search results page
-    console.log('Search Query:', searchQuery);
+    // console.log('Search Query:', searchQuery);
+    dispatch(searchSlice.actions.addKeywordsQuery())
   };
 
   return (

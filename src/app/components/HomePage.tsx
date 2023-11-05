@@ -4,7 +4,6 @@ import Searchbar from './Home/Searchbar'
 import Navbar from './Navbar'
 import ReactDOM from 'react-dom';
 import NewNote from './NewNote';
-import Navbar from './Navbar';
 
 export default async function Home() {
   return (

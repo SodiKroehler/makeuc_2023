@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import './NewNote.css'; // make sure to create a corresponding CSS file
+import Link from 'next/link'
 
 const NewNote = () => {
   const [schoolName, setSchool] = useState('');
@@ -62,7 +63,8 @@ const NewNote = () => {
           placeholder="Description"
         ></textarea>
 
-        <button type="submit">Create</button>
+        {/* <button type="submit">Create</button> */}
+        <Link className = "create" href='/Editor'>Create</Link>
       </form>
     </div>
   );

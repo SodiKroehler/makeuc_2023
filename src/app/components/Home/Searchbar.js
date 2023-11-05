@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import logo from '/public/logo.jpg';
+import Image from 'next/image'
 
 const Searchbar = () => {
   // State to store the input value
@@ -18,7 +20,9 @@ const Searchbar = () => {
 
   return (
     <div style={{ textAlign: 'center', paddingTop: '20vh' }}>
-      <div style={{ fontSize: '48px', color: 'white' }}>NotesAnywhere</div>
+      {/* Replace the text with an img tag for the logo */}
+      {/* <img src={logo} alt="Notes Anywhere" style={{ maxWidth: '100%', height: 'auto' }} /> */}
+      <Image src="/logo.jpg" alt="Notes Anywhere" width={400} height={125} />
       <form onSubmit={handleSearchSubmit}>
         <input
           type="text"

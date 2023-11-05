@@ -5,7 +5,8 @@ export default async function NoteViewer({ params }: { params: { slug: string } 
         r.json()
     })
 
-    const noteName = await noteDetails.name;
+    const noteName = await noteDetails;
+    console.log(noteName)
 
-    return <div>id = {noteName}</div>
+    return <div>id </div>
   }

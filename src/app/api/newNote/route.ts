@@ -13,5 +13,5 @@ export async function POST(req: NextRequest, res: NextResponse) {
       })
 
       return NextResponse.json({user})
-    } 
+    } else return NextResponse.json({status: 403})
   }

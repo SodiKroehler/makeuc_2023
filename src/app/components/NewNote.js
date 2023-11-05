@@ -1,17 +1,31 @@
-import React, { useState } from 'react';
+"use client"
+import React, { useState, useEffect } from 'react';
 import './NewNote.css'; // make sure to create a corresponding CSS file
 
 const NewNote = () => {
-  const [school, setSchool] = useState('');
+  const [schoolName, setSchool] = useState('');
+  const [schools, setSchoolList] = useState([]);
   const [topic, setTopic] = useState('');
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  const topics = [];
+  const school = "";
 
   const handleSubmit = (event) => {
     event.preventDefault();
     // Handle the form submission logic here
-    console.log({ school, topic, title, description });
+    console.log({ schools, topic, title, description });
   };
+
+  useEffect(() => {
+    const callAPI = async () => {
+        const query = await fetch('api/school?userID=clokp4tzg0004soz46ntd21uy')
+        const repo = await query.json();
+        setSchoolList(repo.schools)
+    }
+    callAPI();
+  }, []);
+
 
   return (
     <div className="new-note-container">
@@ -19,16 +33,20 @@ const NewNote = () => {
       <form onSubmit={handleSubmit}>
         <select value={school} onChange={(e) => setSchool(e.target.value)}>
           {/* Populate these options with your actual data */}
-          <option value="">Select School</option>
-          <option value="school1">School 1</option>
-          <option value="school2">School 2</option>
+           {schools.map((school) => (
+            <option key={school.id} value={school.name}>
+              {school.name}
+            </option>
+          ))}
         </select>
 
         <select value={topic} onChange={(e) => setTopic(e.target.value)}>
-          {/* Populate these options with your actual data */}
           <option value="">Select Topic</option>
-          <option value="topic1">Topic 1</option>
-          <option value="topic2">Topic 2</option>
+          {topics.map((topicOption) => (
+            <option key={topicOption.value} value={topicOption.value}>
+              {topicOption.label}
+            </option>
+          ))}
         </select>
 
         <input

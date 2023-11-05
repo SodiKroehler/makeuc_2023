@@ -1,16 +1,27 @@
 .form-group {
     padding: 8px 12px;
     font-size: 14px;
-    line-height: 1.42857143;
     color: #555;
     background-color: rgb(70, 138, 190);
     background-image: none;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 20px;
-    width: 400px;
+    width: 155px;
     text-align: center;
     color: white;
+    flex-direction: row;
+    max-height: 300px; /* Set an appropriate maximum height */
+    overflow-y: scroll;
+}
+.group-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-height: 300px; /* Set an appropriate maximum height */
+    overflow-y: scroll;
+    margin: auto;
 }
 
 select {
@@ -23,7 +34,9 @@ select {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 45%;
+    width: 500px;
+    margin: auto;
+    text-align: center;
 }
 
 .DescriptionStyles {
@@ -38,10 +51,17 @@ select {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 35px;
+    max-height: 300px; /* Set an appropriate maximum height */
+    overflow-y: scroll;
 }
 
 .body {
-    width: 500px;
+    width: 600px;
     margin: 50px auto 0;
+    text-align: center;
+}
+
+.bodyText {
     text-align: center;
 }

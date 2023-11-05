@@ -1,5 +1,4 @@
 
-// import React from 'react';
 import './Navbar.css'; // Make sure to create a Navbar.css file for your styles
 import Image from 'next/image'
 import Link from 'next/Link'
@@ -24,7 +23,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-</div>
+      </div>
       
   );
 };

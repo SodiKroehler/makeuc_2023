@@ -20,16 +20,20 @@ const NewNote = () => {
       <form onSubmit={handleSubmit}>
         <select value={school} onChange={(e) => setSchool(e.target.value)}>
           {/* Populate these options with your actual data */}
-          <option value="">Select School</option>
-          <option value="school1">School 1</option>
-          <option value="school2">School 2</option>
+           {schools.map((school) => (
+            <option key={school.name} value={school.name}>
+              {school.name}
+            </option>
+          ))}
         </select>
 
         <select value={topic} onChange={(e) => setTopic(e.target.value)}>
-          {/* Populate these options with your actual data */}
           <option value="">Select Topic</option>
-          <option value="topic1">Topic 1</option>
-          <option value="topic2">Topic 2</option>
+          {topics.map((topicOption) => (
+            <option key={topicOption.value} value={topicOption.value}>
+              {topicOption.label}
+            </option>
+          ))}
         </select>
 
         <input

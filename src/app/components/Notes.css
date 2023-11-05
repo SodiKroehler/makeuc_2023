@@ -1,0 +1,46 @@
+.form-group {
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    width: 400px;
+    text-align: center;
+}
+
+select {
+    margin: 5px;
+    /* Add other styling for the select elements */
+}
+
+.TopicStyles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+}
+
+.DescriptionStyles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+}
+
+.PageHeading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body {
+    width: 500px;
+    margin: 50px auto 0;
+    text-align: center;
+}
